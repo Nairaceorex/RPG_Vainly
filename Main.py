@@ -6,8 +6,8 @@ from Person import *
 class Main:
     def __init__(self, screen):
         self.screen = screen
-        self.person = Person()
-        self.background = pygame.image.load('Old-Dungeon1.png')
+        self.person = Hero('Hero')
+        self.background = pygame.image.load('Old-Dungeon.jpg')
         self.running = True
         self.main_loop()
         pass

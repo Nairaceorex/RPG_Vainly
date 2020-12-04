@@ -9,12 +9,12 @@ class Person:
     lvlDefence = 1
     lvlHeal = 1
 
-    def __init__(self):
+    def __init__(self,name):
         self.state = ALIVE
         self.directon = RIGHT
         self.x=START_X
         self.y=START_Y
-        self.name = 'Hero'
+        self.name = name
         self.hp=HP
         self.mp=MP
         self.image_pack = ['playerR.png','playerL.png']
@@ -35,3 +35,7 @@ class Person:
 
     def render_ui(self, screen):
         pass
+
+class Hero(Person):
+    def __init__(self,name):
+        super().__init__(name)
